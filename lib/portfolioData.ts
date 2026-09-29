@@ -86,7 +86,7 @@ export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
 export const projectCategories = [
   'Todos',
   'Unreal Engine',
-  'Unity 3D',
+  'Unity 2D',
 ] as const
 
 export type ProjectCategory = Exclude<(typeof projectCategories)[number], 'Todos'>
@@ -108,6 +108,8 @@ export interface Project {
   thumbnail: string
   /** Vídeo opcional (mp4/webm). Si existe, se reproduce en bucle en la tarjeta y en el modal. */
   video?: string
+  /** Si es `false`, la tarjeta no muestra el botón "Demo" (el vídeo sigue en el modal). */
+  showDemoOnCard?: boolean
   /** Imágenes extra para la galería del modal. */
   gallery: string[]
   /** Desglose de mecánicas / sistemas destacados. */
@@ -119,79 +121,48 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'neon-vanguard',
-    title: 'Neon Vanguard',
-    role: 'Lead Gameplay Programmer',
+    id: 'the-last-track-of-time',
+    title: 'The Last Track Of Time',
+    role: 'Proyecto grupal',
     engine: 'Unreal Engine',
-    genre: 'Action / Hack & Slash',
-    year: '2025',
+    genre: 'Deducción Social',
+    year: '',
     description:
-      'Acción en tercera persona en una megaciudad cyberpunk con combate fluido basado en combos, dash cancelable y enemigos con IA táctica.',
+      'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
     longDescription:
-      'Neon Vanguard es un hack & slash en tercera persona desarrollado en Unreal Engine 5. Diseñé e implementé el sistema de combate completo usando Gameplay Ability System, con ventanas de cancelación, hit-stop y animaciones basadas en Motion Matching.',
-    tech: ['UE5', 'C++', 'GAS', 'Niagara', 'Motion Matching'],
-    thumbnail: '/projects/neon-vanguard.png',
-    video: '',
-    gallery: ['/projects/neon-vanguard.png', '/projects/neon-vanguard-2.png'],
-    mechanics: [
-      {
-        title: 'Sistema de combos con GAS',
-        detail:
-          'Abilities encadenables con buffers de input de 150 ms y cancelación por dash para un combate responsivo.',
-      },
-      {
-        title: 'IA táctica con Behavior Trees',
-        detail:
-          'Enemigos que flanquean y coordinan ataques usando EQS y un token system que limita agresores simultáneos.',
-      },
-      {
-        title: 'Optimización de VFX',
-        detail:
-          'Pooling de sistemas Niagara y LODs dinámicos para mantener 60 FPS estables en escenas con 40+ enemigos.',
-      },
+      'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
+    tech: ['UE5'],
+    thumbnail: '/projects/the-last-track-of-time/main-menu.png',
+    video: '/videos/the-last-track-of-time-gameplay.mp4',
+    showDemoOnCard: false,
+    gallery: [
+      '/projects/the-last-track-of-time/main-menu.png',
+      '/projects/the-last-track-of-time/screenshot-1.png',
+      '/projects/the-last-track-of-time/screenshot-2.png',
     ],
-    stats: [
-      { label: 'Equipo', value: '8 personas' },
-      { label: 'Duración', value: '14 meses' },
-      { label: 'Plataforma', value: 'PC / PS5' },
-    ],
-    links: { demo: 'https://tu-usuario.itch.io/neon-vanguard', code: 'https://github.com/tu-usuario/neon-vanguard' },
+    mechanics: [],
+    stats: [{ label: 'Plataforma', value: 'PC' }],
+    links: {},
   },
   {
-    id: 'orbital-drift',
-    title: 'Orbital Drift',
-    role: 'Game Developer & Physics',
-    engine: 'Unity 3D',
-    genre: 'Arcade Racing',
-    year: '2024',
+    id: 'piropeo',
+    title: 'Piropeo',
+    role: 'Proyecto grupal',
+    engine: 'Unity 2D',
+    genre: '2D y Top-Down',
+    year: '',
     description:
-      'Carreras antigravedad a alta velocidad con físicas de derrape personalizadas, fantasmas online y pistas generadas proceduralmente.',
+      'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
     longDescription:
-      'Orbital Drift es un arcade racer de naves flotantes creado en Unity. Programé un controlador físico propio sobre Rigidbody con suspensión por raycast, derrape con acumulación de boost y un sistema de replays deterministas.',
-    tech: ['Unity', 'C#', 'Shader Graph', 'Netcode', 'Cinemachine'],
-    thumbnail: '/projects/orbital-drift.png',
-    video: '',
-    gallery: ['/projects/orbital-drift.png', '/projects/orbital-drift-2.png'],
-    mechanics: [
-      {
-        title: 'Hover physics',
-        detail: 'Suspensión por 4 raycasts con amortiguación PID para mantener la nave estable sobre superficies curvas.',
-      },
-      {
-        title: 'Replays deterministas',
-        detail: 'Grabación de inputs a tick fijo para reproducir fantasmas online con un tamaño de 12 KB por vuelta.',
-      },
-      {
-        title: 'Shaders de velocidad',
-        detail: 'Distorsión radial y trails en Shader Graph que reaccionan a la velocidad y al boost acumulado.',
-      },
-    ],
-    stats: [
-      { label: 'Equipo', value: '3 personas' },
-      { label: 'Duración', value: '9 meses' },
-      { label: 'Plataforma', value: 'PC / Switch' },
-    ],
-    links: { demo: 'https://tu-usuario.itch.io/orbital-drift', code: 'https://github.com/tu-usuario/orbital-drift' },
+      'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
+    tech: ['Unity', 'C#'],
+    thumbnail: '/projects/piropeo/logo.png',
+    video: '/videos/piropeo-gameplay.mp4',
+    showDemoOnCard: false,
+    gallery: ['/projects/piropeo/main-menu.png'],
+    mechanics: [],
+    stats: [{ label: 'Plataforma', value: 'PC' }],
+    links: {},
   },
 ]
 
