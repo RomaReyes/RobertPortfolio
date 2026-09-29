@@ -115,9 +115,11 @@ function ModalContent({ project, onClose }: { project: Project; onClose: () => v
             <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-1 font-tech text-xs font-bold uppercase tracking-wider text-primary">
               {project.engine}
             </span>
-            <span className="rounded-full border border-accent/40 bg-accent/10 px-3 py-1 font-tech text-xs font-bold uppercase tracking-wider text-accent">
-              {project.genre}
-            </span>
+            {project.genre && (
+              <span className="rounded-full border border-accent/40 bg-accent/10 px-3 py-1 font-tech text-xs font-bold uppercase tracking-wider text-accent">
+                {project.genre}
+              </span>
+            )}
           </div>
           {meta && (
             <p className="font-tech text-sm font-semibold uppercase tracking-widest text-muted-foreground">{meta}</p>

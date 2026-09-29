@@ -14,16 +14,17 @@ import type { Project } from '@/lib/portfolioData'
 export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () => void }) {
   const [isPlaying, setIsPlaying] = useState(false)
   const meta = [project.role, project.year].filter(Boolean).join(' · ')
-  const hasActions = Boolean(project.video || project.links.demo || project.links.code)
+  const cardVideo = project.showDemoOnCard === false ? '' : project.video
+  const hasActions = Boolean(cardVideo || project.links.demo || project.links.code)
 
   return (
     <article className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-card/60 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_0_40px_-12px] hover:shadow-primary/60">
       {/* ---------- Media: portada o vídeo de gameplay ---------- */}
       <div className="relative aspect-video overflow-hidden">
-        {isPlaying && project.video ? (
+        {isPlaying && cardVideo ? (
           <div className="relative z-10 size-full bg-black">
             <video
-              src={project.video}
+              src={cardVideo}
               poster={project.thumbnail}
               controls
               autoPlay
@@ -56,9 +57,11 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
               <span className="rounded-full border border-primary/40 bg-background/70 px-3 py-1 font-tech text-xs font-bold uppercase tracking-wider text-primary backdrop-blur">
                 {project.engine}
               </span>
-              <span className="rounded-full border border-accent/40 bg-background/70 px-3 py-1 font-tech text-xs font-bold uppercase tracking-wider text-accent backdrop-blur">
-                {project.genre}
-              </span>
+              {project.genre && (
+                <span className="rounded-full border border-accent/40 bg-background/70 px-3 py-1 font-tech text-xs font-bold uppercase tracking-wider text-accent backdrop-blur">
+                  {project.genre}
+                </span>
+              )}
             </div>
           </>
         )}
@@ -99,7 +102,7 @@ export function ProjectCard({ project, onOpen }: { project: Project; onOpen: () 
           {hasActions && (
             /* z-10 para quedar por encima del botón que cubre la tarjeta */
             <div className="relative z-10 flex gap-2">
-              {project.video ? (
+              {cardVideo ? (
                 <button
                   type="button"
                   onClick={() => setIsPlaying(true)}

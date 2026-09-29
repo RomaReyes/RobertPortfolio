@@ -86,7 +86,7 @@ export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
 export const projectCategories = [
   'Todos',
   'Unreal Engine',
-  'Unity 3D',
+  'Unity 2D',
 ] as const
 
 export type ProjectCategory = Exclude<(typeof projectCategories)[number], 'Todos'>
@@ -108,6 +108,8 @@ export interface Project {
   thumbnail: string
   /** Vídeo opcional (mp4/webm). Si existe, se reproduce en bucle en la tarjeta y en el modal. */
   video?: string
+  /** Si es `false`, la tarjeta no muestra el botón "Demo" (el vídeo sigue en el modal). */
+  showDemoOnCard?: boolean
   /** Imágenes extra para la galería del modal. */
   gallery: string[]
   /** Desglose de mecánicas / sistemas destacados. */
@@ -142,40 +144,26 @@ export const projects: Project[] = [
     links: {},
   },
   {
-    id: 'orbital-drift',
-    title: 'Orbital Drift',
-    role: 'Game Developer & Physics',
-    engine: 'Unity 3D',
-    genre: 'Arcade Racing',
-    year: '2024',
+    id: 'piropeo',
+    title: 'Piropeo',
+    role: '2D y Top-Down',
+    engine: 'Unity 2D',
+    genre: '',
+    year: '',
     description:
-      'Carreras antigravedad a alta velocidad con físicas de derrape personalizadas, fantasmas online y pistas generadas proceduralmente.',
+      'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
     longDescription:
-      'Orbital Drift es un arcade racer de naves flotantes creado en Unity. Programé un controlador físico propio sobre Rigidbody con suspensión por raycast, derrape con acumulación de boost y un sistema de replays deterministas.',
-    tech: ['Unity', 'C#', 'Shader Graph', 'Netcode', 'Cinemachine'],
+      'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
+    tech: ['Unity', 'C#'],
+    /* Sustituye por /projects/piropeo/main-menu.png cuando subas la imagen. */
     thumbnail: '/projects/orbital-drift.png',
+    /* Añade aquí el vídeo de gameplay, ej. "/videos/piropeo-gameplay.mp4". */
     video: '',
-    gallery: ['/projects/orbital-drift.png', '/projects/orbital-drift-2.png'],
-    mechanics: [
-      {
-        title: 'Hover physics',
-        detail: 'Suspensión por 4 raycasts con amortiguación PID para mantener la nave estable sobre superficies curvas.',
-      },
-      {
-        title: 'Replays deterministas',
-        detail: 'Grabación de inputs a tick fijo para reproducir fantasmas online con un tamaño de 12 KB por vuelta.',
-      },
-      {
-        title: 'Shaders de velocidad',
-        detail: 'Distorsión radial y trails en Shader Graph que reaccionan a la velocidad y al boost acumulado.',
-      },
-    ],
-    stats: [
-      { label: 'Equipo', value: '3 personas' },
-      { label: 'Duración', value: '9 meses' },
-      { label: 'Plataforma', value: 'PC / Switch' },
-    ],
-    links: { demo: 'https://tu-usuario.itch.io/orbital-drift', code: 'https://github.com/tu-usuario/orbital-drift' },
+    showDemoOnCard: false,
+    gallery: ['/projects/orbital-drift.png'],
+    mechanics: [],
+    stats: [{ label: 'Plataforma', value: 'PC' }],
+    links: {},
   },
 ]
 
