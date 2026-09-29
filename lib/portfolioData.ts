@@ -123,7 +123,7 @@ export const projects: Project[] = [
   {
     id: 'the-last-track-of-time',
     title: 'The Last Track Of Time',
-    role: '',
+    role: 'Proyecto grupal',
     engine: 'Unreal Engine',
     genre: 'Deducción Social',
     year: '',
@@ -134,6 +134,7 @@ export const projects: Project[] = [
     tech: ['UE5'],
     thumbnail: '/projects/the-last-track-of-time/main-menu.png',
     video: '/videos/the-last-track-of-time-gameplay.mp4',
+    showDemoOnCard: false,
     gallery: [
       '/projects/the-last-track-of-time/main-menu.png',
       '/projects/the-last-track-of-time/screenshot-1.png',
@@ -146,9 +147,9 @@ export const projects: Project[] = [
   {
     id: 'piropeo',
     title: 'Piropeo',
-    role: '2D y Top-Down',
+    role: 'Proyecto grupal',
     engine: 'Unity 2D',
-    genre: '',
+    genre: '2D y Top-Down',
     year: '',
     description:
       'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
