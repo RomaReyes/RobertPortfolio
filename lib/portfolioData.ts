@@ -214,6 +214,7 @@ export const skillGroups: SkillGroup[] = [
     items: [
       { name: 'Blender', detail: 'Modelado, rigging, blockouts' },
       { name: 'Git / Git LFS / Perforce', detail: 'Control de versiones para equipos' },
+      {name:'Figma', detail: Interfaz UI/UX}
     ],
   },
 ]
