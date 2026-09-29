@@ -155,12 +155,10 @@ export const projects: Project[] = [
     longDescription:
       'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
     tech: ['Unity', 'C#'],
-    /* Sustituye por /projects/piropeo/main-menu.png cuando subas la imagen. */
-    thumbnail: '/projects/orbital-drift.png',
-    /* Añade aquí el vídeo de gameplay, ej. "/videos/piropeo-gameplay.mp4". */
-    video: '',
+    thumbnail: '/projects/piropeo/logo.png',
+    video: '/videos/piropeo-gameplay.mp4',
     showDemoOnCard: false,
-    gallery: ['/projects/orbital-drift.png'],
+    gallery: ['/projects/piropeo/main-menu.png'],
     mechanics: [],
     stats: [{ label: 'Plataforma', value: 'PC' }],
     links: {},

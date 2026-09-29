@@ -152,7 +152,7 @@ function ModalContent({ project, onClose }: { project: Project; onClose: () => v
             <div className="overflow-hidden rounded-lg border border-white/10 bg-black">
               <video
                 src={project.video}
-                poster={project.thumbnail}
+                  poster={project.gallery[0] ?? project.thumbnail}
                 controls
                 playsInline
                 preload="metadata"
