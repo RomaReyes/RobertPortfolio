@@ -192,8 +192,8 @@ export const skillGroups: SkillGroup[] = [
     subtitle: 'Game Engines',
     icon: Boxes,
     items: [
-      { name: 'Unreal Engine 5', tag: 'Experto', level: 92, detail: 'GAS, Niagara, Lumen, World Partition' },
-      { name: 'Unity 3D / 2D', tag: 'Avanzado', level: 85, detail: 'URP/HDRP, DOTS, Addressables, C#' },
+      { name: 'Unreal Engine 5', level: 100, detail: 'Niagara, Lumen, ' },
+      { name: 'Unity 3D / 2D', level: 100, detail: 'URP/HDRP, C#' },
     ],
   },
   {
@@ -202,7 +202,7 @@ export const skillGroups: SkillGroup[] = [
     subtitle: 'Programming',
     icon: Code2,
     items: [
-      { name: 'C++ / Blueprints', tag: 'Experto', level: 90 },
+      { name: 'Blueprints', tag: 'Experto', level: 90 },
       { name: 'C#', tag: 'Avanzado', level: 86 },
     ],
   },
