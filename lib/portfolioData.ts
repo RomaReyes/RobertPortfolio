@@ -25,7 +25,7 @@ import {
  * ------------------------------------------------------------------------- */
 export const profile = {
   /** Nombre corto que aparece en el logo de la cabecera. */
-  name: 'ALEX DEV',
+  name: 'ROBERT REYES',
   /** Subtítulo que acompaña al logo. */
   tagline: 'GAME CREATOR',
   /** Iniciales mostradas dentro de la insignia del logo. */
@@ -39,7 +39,7 @@ export const profile = {
   email: 'alex@alexdev.games',
   /** Texto breve de la sección "Sobre Mí" (pie de página). */
   about:
-    'Desarrollador de videojuegos con más de 6 años creando experiencias jugables en Unreal y Unity. Me especializo en gameplay programming, sistemas de IA y optimización de rendimiento en producciones comerciales.',
+    'Desarrollador de videojuegos con 2 años de experiencia haciendo juegos entrenidos y jugables en Unreal y Unity. Me especializo en gameplay programming, sistemas de IA y optimización de rendimiento en producciones comerciales.',
   location: 'Madrid, España · Remoto',
   /**
    * Foto de la sección "Sobre Mí". Sube tu imagen a /public/profile/
