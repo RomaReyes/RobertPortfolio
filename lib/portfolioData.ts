@@ -119,43 +119,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'neon-vanguard',
-    title: 'Neon Vanguard',
-    role: 'Lead Gameplay Programmer',
+    id: 'the-last-track-of-time',
+    title: 'The Last Track Of Time',
+    role: '',
     engine: 'Unreal Engine',
-    genre: 'Action / Hack & Slash',
-    year: '2025',
+    genre: 'Deducción Social',
+    year: '',
     description:
-      'Acción en tercera persona en una megaciudad cyberpunk con combate fluido basado en combos, dash cancelable y enemigos con IA táctica.',
+      'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
     longDescription:
-      'Neon Vanguard es un hack & slash en tercera persona desarrollado en Unreal Engine 5. Diseñé e implementé el sistema de combate completo usando Gameplay Ability System, con ventanas de cancelación, hit-stop y animaciones basadas en Motion Matching.',
-    tech: ['UE5', 'C++', 'GAS', 'Niagara', 'Motion Matching'],
-    thumbnail: '/projects/neon-vanguard.png',
-    video: '',
-    gallery: ['/projects/neon-vanguard.png', '/projects/neon-vanguard-2.png'],
-    mechanics: [
-      {
-        title: 'Sistema de combos con GAS',
-        detail:
-          'Abilities encadenables con buffers de input de 150 ms y cancelación por dash para un combate responsivo.',
-      },
-      {
-        title: 'IA táctica con Behavior Trees',
-        detail:
-          'Enemigos que flanquean y coordinan ataques usando EQS y un token system que limita agresores simultáneos.',
-      },
-      {
-        title: 'Optimización de VFX',
-        detail:
-          'Pooling de sistemas Niagara y LODs dinámicos para mantener 60 FPS estables en escenas con 40+ enemigos.',
-      },
+      'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
+    tech: ['UE5'],
+    thumbnail: '/projects/the-last-track-of-time/main-menu.png',
+    video: '/videos/the-last-track-of-time-gameplay.mp4',
+    gallery: [
+      '/projects/the-last-track-of-time/main-menu.png',
+      '/projects/the-last-track-of-time/screenshot-1.png',
+      '/projects/the-last-track-of-time/screenshot-2.png',
     ],
-    stats: [
-      { label: 'Equipo', value: '8 personas' },
-      { label: 'Duración', value: '14 meses' },
-      { label: 'Plataforma', value: 'PC / PS5' },
-    ],
-    links: { demo: 'https://tu-usuario.itch.io/neon-vanguard', code: 'https://github.com/tu-usuario/neon-vanguard' },
+    mechanics: [],
+    stats: [{ label: 'Plataforma', value: 'PC' }],
+    links: {},
   },
   {
     id: 'orbital-drift',
