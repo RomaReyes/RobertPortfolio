@@ -25,22 +25,22 @@ import {
  * ------------------------------------------------------------------------- */
 export const profile = {
   /** Nombre corto que aparece en el logo de la cabecera. */
-  name: 'ROBERT REYES',
+  name: 'ROBERT JIMENEZ REYES',
   /** Subtítulo que acompaña al logo. */
   tagline: 'GAME CREATOR',
   /** Iniciales mostradas dentro de la insignia del logo. */
-  initials: 'AD',
+  initials: 'RR',
   /** Texto de la píldora de estado. Pon `available: false` para ocultarla. */
   status: {
     available: true,
     label: 'Disponible para Proyectos',
   },
   /** Email usado por el botón "Contáctame". */
-  email: 'alex@alexdev.games',
+  email: 'robertjimenezreyes64@gmail.com',
   /** Texto breve de la sección "Sobre Mí" (pie de página). */
   about:
     'Desarrollador de videojuegos con 2 años de experiencia haciendo juegos entrenidos y jugables en Unreal y Unity. Me especializo en gameplay programming, sistemas de IA y optimización de rendimiento en producciones comerciales.',
-  location: 'Madrid, España · Remoto',
+  location: 'Santo Domingo Oeste, Republica Dominicana · Remoto',
   /**
    * Foto de la sección "Sobre Mí". Sube tu imagen a /public/profile/
    * y cambia `src` (ej. "/profile/mi-foto.jpg"). Se recorta en formato cuadrado.
@@ -72,9 +72,8 @@ export type SocialIcon = 'github' | 'instagram' | 'itchio' | 'youtube' | 'linked
 
 export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
   { name: 'GitHub', href: 'https://github.com/tu-usuario', icon: 'github' },
-  { name: 'Instagram', href: 'https://instagram.com/tu-usuario', icon: 'instagram' },
-  { name: 'Itch.io', href: 'https://tu-usuario.itch.io', icon: 'itchio' },
-  { name: 'YouTube', href: 'https://youtube.com/@tu-canal', icon: 'youtube' },
+  { name: 'Instagram', href: 'https://instagram.com/adder.furious', icon: 'instagram' },
+  { name: 'Itch.io', href: 'https://AdderFurious.itch.io', icon: 'itchio' },
   { name: 'LinkedIn', href: 'https://linkedin.com/in/tu-usuario', icon: 'linkedin' },
 ]
 
