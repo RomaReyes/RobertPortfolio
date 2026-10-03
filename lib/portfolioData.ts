@@ -39,16 +39,18 @@ export const profile = {
   email: 'robertjimenezreyes64@gmail.com',
   /** Texto breve de la sección "Sobre Mí" (pie de página). */
   about:
-    'Desarrollador de videojuegos con 2 años de experiencia haciendo juegos entrenidos y jugables en Unreal y Unity. Me especializo en gameplay programming, sistemas de IA y optimización de rendimiento en producciones comerciales.',
+    'Desarrollador de videojuegos con 2 años de experiencia práctica en proyectos académicos y colaborativos, utilizando Unreal Engine y Unity. Enfocado en gameplay programming, implementación de mecánicas y desarrollo de experiencias jugables',
   location: 'Santo Domingo Oeste, Republica Dominicana , Remoto',
   /**
    * Foto de la sección "Sobre Mí". Sube tu imagen a /public/profile/
    * y cambia `src` (ej. "/profile/mi-foto.jpg"). Se recorta en formato cuadrado.
    */
-  photo: {
-    src: '/profile/foto-perfil.png',
-    alt: 'Foto de perfil de Alex, desarrollador de videojuegos',
-  },
+
+   photo: {
+  src: '/profile/profilePerfil.png',
+  alt: 'Foto de perfil de Robert Jimenez Reyes',
+},
+  
 }
 
 /* ----------------------------------------------------------------------------
@@ -85,7 +87,7 @@ export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
 export const projectCategories = [
   'Todos',
   'Unreal Engine',
-  'Unity 2D',
+  'Unity ',
 ] as const
 
 export type ProjectCategory = Exclude<(typeof projectCategories)[number], 'Todos'>
@@ -147,7 +149,7 @@ export const projects: Project[] = [
     id: 'piropeo',
     title: 'Piropeo',
     role: 'Proyecto grupal',
-    engine: 'Unity 2D',
+    engine: 'Unity ',
     genre: '2D y Top-Down',
     year: '',
     description:
@@ -163,6 +165,44 @@ export const projects: Project[] = [
     stats: [{ label: 'Plataforma', value: 'PC' }],
     links: {},
   },
+
+   {
+    id: 'Target Rush',
+    title: 'Target Rush',
+    role: 'Proyecto grupal',
+    engine: 'Unity ',
+    genre: 'VR/Aim Trainer' ,
+    year: '2025',
+
+    description:
+      'Simualción en realidad virtual sobre un campo de tiro espacial, debes disparar a todas las dianas antes de que acabe el tiempo.',
+
+    longDescription:
+           'Simualción en realidad virtual sobre un campo de tiro espacial, debes disparar a todas las dianas antes de que acabe el tiempo.',
+
+
+    tech: ['Unity', 'C#'],
+
+    thumbnail: '/projects/TargetRush/TargetRush MainMenu.jpeg',
+
+    video: '/videos/Target rush Gameplay.mp4',
+
+    showDemoOnCard: false,
+
+gallery: [
+  '/projects/TargetRush/TargetRush MainMenu.jpeg',
+  '/projects/TargetRush/Screenshot 2026-09-29 165722.png',
+  '/projects/TargetRush/Screenshot 2026-09-29 165641.png',
+],
+    mechanics: [],
+
+    stats: [
+      { label: 'Plataforma', value: 'PC' },
+    ],
+
+    links: {},
+  },
+
 ]
 
 /* ----------------------------------------------------------------------------
