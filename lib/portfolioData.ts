@@ -25,22 +25,22 @@ import {
  * ------------------------------------------------------------------------- */
 export const profile = {
   /** Nombre corto que aparece en el logo de la cabecera. */
-  name: 'ROBERT JIMENEZ REYES',
+  name: 'ALEX DEV',
   /** Subtítulo que acompaña al logo. */
   tagline: 'GAME CREATOR',
   /** Iniciales mostradas dentro de la insignia del logo. */
-  initials: 'RR',
+  initials: 'AD',
   /** Texto de la píldora de estado. Pon `available: false` para ocultarla. */
   status: {
     available: true,
     label: 'Disponible para Proyectos',
   },
   /** Email usado por el botón "Contáctame". */
-  email: 'robertjimenezreyes64@gmail.com',
+  email: 'alex@alexdev.games',
   /** Texto breve de la sección "Sobre Mí" (pie de página). */
   about:
-    'Desarrollador de videojuegos con 2 años de experiencia haciendo juegos entrenidos y jugables en Unreal y Unity. Me especializo en gameplay programming, sistemas de IA y optimización de rendimiento en producciones comerciales.',
-  location: 'Santo Domingo Oeste, Republica Dominicana , Remoto',
+    'Desarrollador de videojuegos con más de 6 años creando experiencias jugables en Unreal y Unity. Me especializo en gameplay programming, sistemas de IA y optimización de rendimiento en producciones comerciales.',
+  location: 'Madrid, España · Remoto',
   /**
    * Foto de la sección "Sobre Mí". Sube tu imagen a /public/profile/
    * y cambia `src` (ej. "/profile/mi-foto.jpg"). Se recorta en formato cuadrado.
@@ -72,8 +72,9 @@ export type SocialIcon = 'github' | 'instagram' | 'itchio' | 'youtube' | 'linked
 
 export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
   { name: 'GitHub', href: 'https://github.com/tu-usuario', icon: 'github' },
-  { name: 'Instagram', href: 'https://instagram.com/adder.furious', icon: 'instagram' },
-  { name: 'Itch.io', href: 'https://AdderFurious.itch.io', icon: 'itchio' },
+  { name: 'Instagram', href: 'https://instagram.com/tu-usuario', icon: 'instagram' },
+  { name: 'Itch.io', href: 'https://tu-usuario.itch.io', icon: 'itchio' },
+  { name: 'YouTube', href: 'https://youtube.com/@tu-canal', icon: 'youtube' },
   { name: 'LinkedIn', href: 'https://linkedin.com/in/tu-usuario', icon: 'linkedin' },
 ]
 
@@ -85,7 +86,7 @@ export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
 export const projectCategories = [
   'Todos',
   'Unreal Engine',
-  'Unity 2D',
+  'Unity 3D',
 ] as const
 
 export type ProjectCategory = Exclude<(typeof projectCategories)[number], 'Todos'>
@@ -107,8 +108,6 @@ export interface Project {
   thumbnail: string
   /** Vídeo opcional (mp4/webm). Si existe, se reproduce en bucle en la tarjeta y en el modal. */
   video?: string
-  /** Si es `false`, la tarjeta no muestra el botón "Demo" (el vídeo sigue en el modal). */
-  showDemoOnCard?: boolean
   /** Imágenes extra para la galería del modal. */
   gallery: string[]
   /** Desglose de mecánicas / sistemas destacados. */
@@ -120,48 +119,79 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'the-last-track-of-time',
-    title: 'The Last Track Of Time',
-    role: 'Proyecto grupal',
+    id: 'neon-vanguard',
+    title: 'Neon Vanguard',
+    role: 'Lead Gameplay Programmer',
     engine: 'Unreal Engine',
-    genre: 'Deducción Social',
-    year: '',
+    genre: 'Action / Hack & Slash',
+    year: '2025',
     description:
-      'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
+      'Acción en tercera persona en una megaciudad cyberpunk con combate fluido basado en combos, dash cancelable y enemigos con IA táctica.',
     longDescription:
-      'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
-    tech: ['UE5'],
-    thumbnail: '/projects/the-last-track-of-time/main-menu.png',
-    video: '/videos/the-last-track-of-time-gameplay.mp4',
-    showDemoOnCard: false,
-    gallery: [
-      '/projects/the-last-track-of-time/main-menu.png',
-      '/projects/the-last-track-of-time/screenshot-1.png',
-      '/projects/the-last-track-of-time/screenshot-2.png',
+      'Neon Vanguard es un hack & slash en tercera persona desarrollado en Unreal Engine 5. Diseñé e implementé el sistema de combate completo usando Gameplay Ability System, con ventanas de cancelación, hit-stop y animaciones basadas en Motion Matching.',
+    tech: ['UE5', 'C++', 'GAS', 'Niagara', 'Motion Matching'],
+    thumbnail: '/projects/neon-vanguard.png',
+    video: '',
+    gallery: ['/projects/neon-vanguard.png', '/projects/neon-vanguard-2.png'],
+    mechanics: [
+      {
+        title: 'Sistema de combos con GAS',
+        detail:
+          'Abilities encadenables con buffers de input de 150 ms y cancelación por dash para un combate responsivo.',
+      },
+      {
+        title: 'IA táctica con Behavior Trees',
+        detail:
+          'Enemigos que flanquean y coordinan ataques usando EQS y un token system que limita agresores simultáneos.',
+      },
+      {
+        title: 'Optimización de VFX',
+        detail:
+          'Pooling de sistemas Niagara y LODs dinámicos para mantener 60 FPS estables en escenas con 40+ enemigos.',
+      },
     ],
-    mechanics: [],
-    stats: [{ label: 'Plataforma', value: 'PC' }],
-    links: {},
+    stats: [
+      { label: 'Equipo', value: '8 personas' },
+      { label: 'Duración', value: '14 meses' },
+      { label: 'Plataforma', value: 'PC / PS5' },
+    ],
+    links: { demo: 'https://tu-usuario.itch.io/neon-vanguard', code: 'https://github.com/tu-usuario/neon-vanguard' },
   },
   {
-    id: 'piropeo',
-    title: 'Piropeo',
-    role: 'Proyecto grupal',
-    engine: 'Unity 2D',
-    genre: '2D y Top-Down',
-    year: '',
+    id: 'orbital-drift',
+    title: 'Orbital Drift',
+    role: 'Game Developer & Physics',
+    engine: 'Unity 3D',
+    genre: 'Arcade Racing',
+    year: '2024',
     description:
-      'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
+      'Carreras antigravedad a alta velocidad con físicas de derrape personalizadas, fantasmas online y pistas generadas proceduralmente.',
     longDescription:
-      'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
-    tech: ['Unity', 'C#'],
-    thumbnail: '/projects/piropeo/logo.png',
-    video: '/videos/piropeo-gameplay.mp4',
-    showDemoOnCard: false,
-    gallery: ['/projects/piropeo/main-menu.png'],
-    mechanics: [],
-    stats: [{ label: 'Plataforma', value: 'PC' }],
-    links: {},
+      'Orbital Drift es un arcade racer de naves flotantes creado en Unity. Programé un controlador físico propio sobre Rigidbody con suspensión por raycast, derrape con acumulación de boost y un sistema de replays deterministas.',
+    tech: ['Unity', 'C#', 'Shader Graph', 'Netcode', 'Cinemachine'],
+    thumbnail: '/projects/orbital-drift.png',
+    video: '',
+    gallery: ['/projects/orbital-drift.png', '/projects/orbital-drift-2.png'],
+    mechanics: [
+      {
+        title: 'Hover physics',
+        detail: 'Suspensión por 4 raycasts con amortiguación PID para mantener la nave estable sobre superficies curvas.',
+      },
+      {
+        title: 'Replays deterministas',
+        detail: 'Grabación de inputs a tick fijo para reproducir fantasmas online con un tamaño de 12 KB por vuelta.',
+      },
+      {
+        title: 'Shaders de velocidad',
+        detail: 'Distorsión radial y trails en Shader Graph que reaccionan a la velocidad y al boost acumulado.',
+      },
+    ],
+    stats: [
+      { label: 'Equipo', value: '3 personas' },
+      { label: 'Duración', value: '9 meses' },
+      { label: 'Plataforma', value: 'PC / Switch' },
+    ],
+    links: { demo: 'https://tu-usuario.itch.io/orbital-drift', code: 'https://github.com/tu-usuario/orbital-drift' },
   },
 ]
 
@@ -192,8 +222,8 @@ export const skillGroups: SkillGroup[] = [
     subtitle: 'Game Engines',
     icon: Boxes,
     items: [
-      { name: 'Unreal Engine 5', level: 100, detail: 'Niagara, Lumen, ' },
-      { name: 'Unity 3D / 2D', level: 100, detail: 'URP/HDRP, C#' },
+      { name: 'Unreal Engine 5', tag: 'Experto', level: 92, detail: 'GAS, Niagara, Lumen, World Partition' },
+      { name: 'Unity 3D / 2D', tag: 'Avanzado', level: 85, detail: 'URP/HDRP, DOTS, Addressables, C#' },
     ],
   },
   {
@@ -202,8 +232,8 @@ export const skillGroups: SkillGroup[] = [
     subtitle: 'Programming',
     icon: Code2,
     items: [
-      { name: 'Blueprints', level: 100 },
-      { name: 'C#', level: 100 },
+      { name: 'C++ / Blueprints', tag: 'Experto', level: 90 },
+      { name: 'C#', tag: 'Avanzado', level: 86 },
     ],
   },
   {
@@ -212,9 +242,8 @@ export const skillGroups: SkillGroup[] = [
     subtitle: 'Toolchain',
     icon: Wrench,
     items: [
-      { name: 'Blender', detail: 'Modelado, blockouts' },
-      { name: 'Git', detail: 'Control de versiones para equipos' },
-      { name:  'Figma', detail: 'Interfaz de usuario UI / UX' },
+      { name: 'Blender', detail: 'Modelado, rigging, blockouts' },
+      { name: 'Git / Git LFS / Perforce', detail: 'Control de versiones para equipos' },
     ],
   },
 ]
