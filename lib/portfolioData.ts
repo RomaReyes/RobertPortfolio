@@ -32,7 +32,7 @@ export const profile = {
   initials: 'RR',
   /** Texto de la píldora de estado. Pon `available: false` para ocultarla. */
   status: {
-    available: true,
+    available: false,
     label: 'Disponible para Proyectos',
   },
   /** Email usado por el botón "Contáctame". */
@@ -73,8 +73,8 @@ export const navLinks = [
 export type SocialIcon = 'github' | 'instagram' | 'itchio' | 'youtube' | 'linkedin' | 'x'
 
 export const socialLinks: { name: string; href: string; icon: SocialIcon }[] = [
-  { name: 'GitHub', href: 'https://github.com/tu-usuario', icon: 'github' },
-  { name: 'Instagram', href: 'https://instagram.com/adder.furious', icon: 'instagram' },
+  { name: 'GitHub', href: 'https://github.com/RomaReyes', icon: 'github' },
+  { name: 'Instagram', href: 'https://instagram.com/robert.theflame', icon: 'instagram' },
   { name: 'Itch.io', href: 'https://AdderFurious.itch.io', icon: 'itchio' },
   { name: 'LinkedIn', href: 'https://linkedin.com/in/tu-usuario', icon: 'linkedin' },
 ]

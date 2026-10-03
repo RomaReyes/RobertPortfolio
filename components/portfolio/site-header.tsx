@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Mail, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { navLinks, profile } from '@/lib/portfolioData'
 
 /**
@@ -50,14 +50,6 @@ export function SiteHeader() {
 
         {/* ---------- Lado derecho ---------- */}
         <div className="flex items-center gap-3">
-          {profile.status.available && <StatusPill className="hidden 2xl:inline-flex" />}
-          <a
-            href={`mailto:${profile.email}`}
-            className="hidden items-center gap-2 rounded-md bg-gradient-to-r from-primary to-accent px-4 py-2 font-tech text-sm font-bold uppercase tracking-wider text-background shadow-[0_0_24px_-6px] shadow-primary transition-transform hover:scale-[1.03] sm:inline-flex"
-          >
-            <Mail className="size-4" aria-hidden="true" />
-            Contáctame
-          </a>
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
@@ -97,14 +89,7 @@ export function SiteHeader() {
                   ))}
                 </ul>
               </nav>
-              {profile.status.available && <StatusPill className="inline-flex self-start" />}
-              <a
-                href={`mailto:${profile.email}`}
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-primary to-accent px-4 py-2.5 font-tech text-sm font-bold uppercase tracking-wider text-background"
-              >
-                <Mail className="size-4" aria-hidden="true" />
-                Contáctame
-              </a>
+              
             </div>
           </motion.div>
         )}
@@ -115,15 +100,5 @@ export function SiteHeader() {
 
 /** Píldora de estado con punto pulsante. */
 function StatusPill({ className = '' }: { className?: string }) {
-  return (
-    <span
-      className={`items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 font-tech text-xs font-semibold tracking-wide text-emerald-300 ${className}`}
-    >
-      <span className="relative flex size-2">
-        <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-        <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
-      </span>
-      {profile.status.label}
-    </span>
-  )
+  
 }
