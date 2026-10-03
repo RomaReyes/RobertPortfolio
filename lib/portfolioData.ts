@@ -61,7 +61,7 @@ export const navLinks = [
   { label: 'Sobre Mí', href: '#sobre-mi' },
   { label: 'Habilidades', href: '#habilidades' },
   { label: 'Proyectos', href: '#proyectos' },
-  { label: 'Contacto', href: '#contacto' },
+  
 ]
 
 /* ----------------------------------------------------------------------------
