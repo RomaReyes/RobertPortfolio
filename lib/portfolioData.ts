@@ -203,6 +203,45 @@ gallery: [
     links: {},
   },
 
+
+{
+  id: 'Miner Journey',
+  title: 'Miner Journey',
+  role: 'Proyecto grupal',
+  engine: 'Unreal Engine',
+  genre: 'Aventura / RPG',
+  year: '2026',
+
+  description:
+    'Juego de aventura y supervivencia con perspectiva top-down, donde exploras distintos biomas, recolectas recursos y gestionas tu salud e inventario para sobrevivir.',
+
+  longDescription:
+    'Miner Journey es un juego de aventura y supervivencia con perspectiva top-down en el que el jugador controla a un minero que debe explorar distintos biomas, como bosques, desiertos y mazmorras. Durante la aventura, deberá utilizar diferentes herramientas para recolectar recursos, gestionar su salud e inventario y enfrentarse a los peligros de cada entorno. El juego combina exploración, recolección y gestión de recursos como parte principal de su experiencia.',
+
+  tech: ['Unreal Engine 5', 'Blueprints'],
+
+  thumbnail: '/projects/MinerJourney/Portada(Windows).png',
+
+  video: '/videos/miner-journey-gameplay.mp4',
+
+  showDemoOnCard: false,
+
+  gallery: [
+    '/projects/MinerJourney/Miner1.jpeg',
+    '/projects/MinerJourney/Miner2.jpeg',
+    '/projects/MinerJourney/Miner3.jpeg',
+  ],
+
+  mechanics: [],
+
+  stats: [
+    { label: 'Plataforma', value: 'PC' },
+  ],
+
+  links: {},
+},
+  
+
 ]
 
 /* ----------------------------------------------------------------------------
