@@ -47,7 +47,7 @@ export const profile = {
    */
 
    photo: {
-  src: '/profile/profilePerfil.png',
+  src: '/profile/ID-CARD.png',
   alt: 'Foto de perfil de Robert Jimenez Reyes',
 },
   
