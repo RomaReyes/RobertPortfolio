@@ -23,7 +23,7 @@ export function AboutSection() {
               fill
               priority
               sizes="(min-width: 768px) 384px, 90vw"
-              className= "object-cover object-[center_15%]"
+              className= "object-cover object-[center_30]"
             />
           </div>
           <span
