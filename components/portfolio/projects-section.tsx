@@ -28,7 +28,7 @@ export function ProjectsSection() {
     <section id="proyectos" aria-labelledby="proyectos-title" className="scroll-mt-20 border-t border-white/5 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <SectionHeading id="proyectos-title" tag="GAME CREATOR" title="PROYECTOS DESTACADOS" />
+          <SectionHeading id="proyectos-title" tag="" title="PROYECTOS DESTACADOS" />
 
           {/* ---------- Filtros ---------- */}
           <div role="group" aria-label="Filtrar proyectos por motor" className="flex flex-wrap gap-2 lg:max-w-2xl lg:justify-end">

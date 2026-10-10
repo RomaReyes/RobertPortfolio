@@ -9,7 +9,7 @@ const orbitron = Orbitron({ subsets: ['latin'], variable: '--font-orbitron' })
 const rajdhani = Rajdhani({ subsets: ['latin'], weight: ['500', '600', '700'], variable: '--font-rajdhani' })
 
 export const metadata: Metadata = {
-  title: 'Robert Jimenez Reyes · Game Creator | Portafolio de Desarrollo de Videojuegos',
+  title: 'Robert Jimenez Reyes · Creador de videojuegos | Portafolio de Desarrollo de Videojuegos',
   description:
     'Portafolio de Robert Dev, desarrollador de videojuegos especializado en Unreal Engine 5 y Unity . Proyectos, habilidades y contacto.',
   generator: 'v0.app',
