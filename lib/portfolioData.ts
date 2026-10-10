@@ -139,7 +139,7 @@ export const projects: Project[] = [
       participation:
       'Programación: Programé las interfaces y busqueda de sonidos y assets para el proyecto.',
 
-    tech: ['Unreal Engine 5, blueprints'],
+    tech: ['Unreal Engine 5',   'blueprints'],
     thumbnail: '/projects/the-last-track-of-time/main-menu.png',
     video: '/videos/the-last-track-of-time-gameplay.mp4',
     showDemoOnCard: false,
@@ -190,7 +190,7 @@ participation:
       'Simualción en realidad virtual sobre un campo de tiro espacial, debes disparar a todas las dianas antes de que acabe el tiempo.',
 
     longDescription:
-           'Simualción en realidad virtual sobre un campo de tiro espacial, debes disparar a todas las dianas antes de que acabe el tiempo.',
+           'Simulación en realidad virtual sobre un campo de tiro espacial, debes disparar a todas las dianas antes de que acabe el tiempo.',
 
            participation:
           'Diseñador: Diseño de interfaz, busqueda de assets y sonidos',
