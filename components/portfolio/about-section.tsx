@@ -37,7 +37,7 @@ export function AboutSection() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <SectionHeading id="sobre-mi-title" tag="PLAYER ONE" title="SOBRE MÍ" />
+          <SectionHeading id="sobre-mi-title" tag="" title="SOBRE MÍ" />
           <p className="max-w-prose text-pretty text-lg leading-relaxed text-muted-foreground">{profile.about}</p>
           <p className="inline-flex items-center gap-2 text-sm text-muted-foreground">
             <MapPin className="size-4 text-accent" aria-hidden="true" />

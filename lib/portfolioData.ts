@@ -27,7 +27,7 @@ export const profile = {
   /** Nombre corto que aparece en el logo de la cabecera. */
   name: 'ROBERT JIMENEZ REYES',
   /** Subtítulo que acompaña al logo. */
-  tagline: 'GAME CREATOR',
+  tagline: 'CREADOR DE VIDEOJUEGOS',
   /** Iniciales mostradas dentro de la insignia del logo. */
   initials: 'RR',
   /** Texto de la píldora de estado. Pon `available: false` para ocultarla. */
@@ -39,7 +39,7 @@ export const profile = {
   email: 'robertjimenezreyes64@gmail.com',
   /** Texto breve de la sección "Sobre Mí" (pie de página). */
   about:
-    'Desarrollador de videojuegos con 2 años de experiencia práctica en proyectos académicos y colaborativos, utilizando Unreal Engine y Unity. Enfocado en gameplay programming, implementación de mecánicas y desarrollo de experiencias jugables',
+    'Desarrollador de videojuegos con 2 años de experiencia práctica en proyectos académicos y colaborativos, utilizando Unreal Engine y Unity. Enfocado en gameplay programming, implementación de mecánicas y desarrollo de experiencias jugables.',
   location: 'Santo Domingo Oeste, Republica Dominicana , Remoto',
   /**
    * Foto de la sección "Sobre Mí". Sube tu imagen a /public/profile/
@@ -95,30 +95,33 @@ export type ProjectCategory = Exclude<(typeof projectCategories)[number], 'Todos
 export interface Project {
   id: string
   title: string
-  /** Tu rol en el proyecto (ej. "Lead Gameplay Programmer"). */
   role: string
   engine: ProjectCategory
   genre: string
   year: string
-  /** Descripción corta para la tarjeta. */
+
   description: string
-  /** Descripción larga para la ficha técnica (modal). */
   longDescription: string
+
+  participation?: string
+
   tech: string[]
-  /** Imagen de portada de la tarjeta. */
+
   thumbnail: string
-  /** Vídeo opcional (mp4/webm). Si existe, se reproduce en bucle en la tarjeta y en el modal. */
+
   video?: string
-  /** Si es `false`, la tarjeta no muestra el botón "Demo" (el vídeo sigue en el modal). */
+
   showDemoOnCard?: boolean
-  /** Imágenes extra para la galería del modal. */
+
   gallery: string[]
-  /** Desglose de mecánicas / sistemas destacados. */
+
   mechanics: { title: string; detail: string }[]
-  /** Datos rápidos mostrados en el modal. */
+
   stats: { label: string; value: string }[]
+
   links: { demo?: string; code?: string }
 }
+
 
 export const projects: Project[] = [
   {
@@ -126,13 +129,17 @@ export const projects: Project[] = [
     title: 'The Last Track Of Time',
     role: 'Proyecto grupal',
     engine: 'Unreal Engine',
-    genre: 'Deducción Social',
+    genre: 'Puzzle',
     year: '',
     description:
       'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
     longDescription:
       'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
-    tech: ['UE5'],
+
+      participation:
+      'Programación: Programé las interfaces y busqueda de sonidos y assets para el proyecto.',
+
+    tech: ['UE5, blueprints'],
     thumbnail: '/projects/the-last-track-of-time/main-menu.png',
     video: '/videos/the-last-track-of-time-gameplay.mp4',
     showDemoOnCard: false,
@@ -156,6 +163,11 @@ export const projects: Project[] = [
       'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
     longDescription:
       'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
+participation:
+      'diseño de sonido y busqueda de assets',
+
+
+
     tech: ['Unity', 'C#'],
     thumbnail: '/projects/piropeo/logo.png',
     video: '/videos/piropeo-gameplay.mp4',
@@ -171,7 +183,7 @@ export const projects: Project[] = [
     title: 'Target Rush',
     role: 'Proyecto grupal',
     engine: 'Unity ',
-    genre: 'VR/Aim Trainer' ,
+    genre: 'Realidad Virtual' ,
     year: '2025',
 
     description:
@@ -180,7 +192,11 @@ export const projects: Project[] = [
     longDescription:
            'Simualción en realidad virtual sobre un campo de tiro espacial, debes disparar a todas las dianas antes de que acabe el tiempo.',
 
+           participation:
+          'Diseñador: Diseño de interfaz, busqueda de assets y sonidos',
 
+
+  
     tech: ['Unity', 'C#'],
 
     thumbnail: '/projects/TargetRush/TargetRush MainMenu.jpeg',
@@ -217,6 +233,9 @@ gallery: [
 
   longDescription:
     'Miner Journey es un juego de aventura y supervivencia con perspectiva top-down en el que el jugador controla a un minero que debe explorar distintos biomas, como bosques, desiertos y mazmorras. Durante la aventura, deberá utilizar diferentes herramientas para recolectar recursos, gestionar su salud e inventario y enfrentarse a los peligros de cada entorno. El juego combina exploración, recolección y gestión de recursos como parte principal de su experiencia.',
+
+     participation:
+      'Programador y Diseñador: programé las mecanicas de jugabilidad, diseñé niveles y gestioné la integración de assets y sonidos.',
 
   tech: ['Unreal Engine 5', 'Blueprints'],
 
@@ -267,8 +286,8 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     id: 'motores',
-    title: 'Motores',
-    subtitle: 'Game Engines',
+    title: 'Motores Graficos',
+    subtitle: '',
     icon: Boxes,
     items: [
       { name: 'Unreal Engine 5', level: 100, detail: 'Niagara, Lumen, ' },
@@ -278,7 +297,7 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'lenguajes',
     title: 'Lenguajes',
-    subtitle: 'Programming',
+    subtitle: 'Programación',
     icon: Code2,
     items: [
       { name: 'Blueprints', level: 100 },
@@ -288,7 +307,7 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'herramientas',
     title: 'Herramientas',
-    subtitle: 'Toolchain',
+    subtitle: '',
     icon: Wrench,
     items: [
       { name: 'Blender', detail: 'Modelado, blockouts' },
