@@ -310,7 +310,7 @@ export const skillGroups: SkillGroup[] = [
     subtitle: '',
     icon: Wrench,
     items: [
-      { name: 'Blender', detail: 'Modelado, blockouts' },
+      { name: 'Blender', detail: 'Modelado 3D' },
       { name: 'Git', detail: 'Control de versiones para equipos' },
       { name:  'Figma', detail: 'Interfaz de usuario UI / UX' },
     ],
