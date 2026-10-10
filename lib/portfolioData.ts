@@ -300,8 +300,8 @@ export const skillGroups: SkillGroup[] = [
     subtitle: 'Programación',
     icon: Code2,
     items: [
-      { name: 'Blueprints', level: 100 },
-      { name: 'C#', level: 100 },
+      { name: 'Blueprints',  },
+      { name: 'C#', },
     ],
   },
   {
