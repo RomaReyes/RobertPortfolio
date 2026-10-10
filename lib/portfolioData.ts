@@ -139,7 +139,7 @@ export const projects: Project[] = [
       participation:
       'Programación: Programé las interfaces y busqueda de sonidos y assets para el proyecto.',
 
-    tech: ['UE5, blueprints'],
+    tech: ['Unreal Engine 5, blueprints'],
     thumbnail: '/projects/the-last-track-of-time/main-menu.png',
     video: '/videos/the-last-track-of-time-gameplay.mp4',
     showDemoOnCard: false,
@@ -168,7 +168,7 @@ participation:
 
 
 
-    tech: ['Unity', 'C#'],
+    tech: ['Unity 6', 'C#'],
     thumbnail: '/projects/piropeo/logo.png',
     video: '/videos/piropeo-gameplay.mp4',
     showDemoOnCard: false,
@@ -197,7 +197,7 @@ participation:
 
 
   
-    tech: ['Unity', 'C#'],
+    tech: ['Unity 6', 'C#'],
 
     thumbnail: '/projects/TargetRush/TargetRush MainMenu.jpeg',
 
