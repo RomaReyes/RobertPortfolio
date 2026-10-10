@@ -130,7 +130,7 @@ export const projects: Project[] = [
     role: 'Proyecto grupal',
     engine: 'Unreal Engine',
     genre: 'Puzzle',
-    year: '',
+    year: '2025',
     description:
       'Eres un viajero del tiempo el cual debe de ubicar a un ladrón del tiempo el cual se robó un codex de los cuales los oficiales del tiempo poseen para reestructurar las líneas temporales.',
     longDescription:
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     role: 'Proyecto grupal',
     engine: 'Unity ',
     genre: '2D y Top-Down',
-    year: '',
+    year: '2026',
     description:
       'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
     longDescription:
