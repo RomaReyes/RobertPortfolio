@@ -290,7 +290,7 @@ export const skillGroups: SkillGroup[] = [
     subtitle: '',
     icon: Boxes,
     items: [
-      { name: 'Unreal Engine 5', level: 100, detail: 'Niagara, Lumen, ' },
+      { name: 'Unreal Engine 5', level: 100, detail: 'Niagara, Lumen ' },
       { name: 'Unity 3D / 2D', level: 100, detail: 'URP/HDRP, C#' },
     ],
   },
