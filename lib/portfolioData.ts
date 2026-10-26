@@ -39,7 +39,7 @@ export const profile = {
   email: 'robertjimenezreyes64@gmail.com',
   /** Texto breve de la sección "Sobre Mí" (pie de página). */
   about:
-    'Desarrollador de videojuegos con 2 años de experiencia práctica en proyectos académicos y colaborativos, utilizando Unreal Engine y Unity. Enfocado en gameplay programming, implementación de mecánicas y desarrollo de experiencias jugables.',
+    'Desarrollador de videojuegos con 2 años de experiencia práctica en proyectos académicos y colaborativos, utilizando Unreal Engine y Unity. Enfocado en Programación y desarrollo de experiencias.',
   location: 'Santo Domingo Oeste, Republica Dominicana , Remoto',
   /**
    * Foto de la sección "Sobre Mí". Sube tu imagen a /public/profile/
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     longDescription:
       'Piropeo es un arcade 2.5D donde la protagonista es una mujer que debe eliminar enemigos en la calle antes de que se acabe el tiempo.',
 participation:
-      'diseño de sonido y busqueda de assets',
+      'Programación de la interfaz, diseño de sonido y búsqueda de assets',
 
 
 
@@ -249,7 +249,7 @@ gallery: [
     '/projects/MinerJourney/Miner1.jpeg',
     '/projects/MinerJourney/Miner2.jpeg',
     '/projects/MinerJourney/Miner3.jpeg',
-  ],
+  ], 
 
   mechanics: [],
 
@@ -311,7 +311,6 @@ export const skillGroups: SkillGroup[] = [
     icon: Wrench,
     items: [
       { name: 'Blender', detail: 'Modelado 3D' },
-      { name: 'Git', detail: 'Control de versiones para equipos' },
       { name:  'Figma', detail: 'Interfaz de usuario UI / UX' },
     ],
   },
